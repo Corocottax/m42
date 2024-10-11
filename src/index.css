@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Lato", serif;
+}
+
+:root {
+  --m42-color-000: rgb(241, 241, 241);
+  --m42-color-100: rgb(68, 252, 68);
+  --m42-color-200: rgb(39, 39, 39);
+}
+
+body {
+  background-color: var(--m42-color-200);
+}
