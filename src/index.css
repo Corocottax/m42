@@ -16,4 +16,5 @@
 
 body {
   background-color: var(--m42-color-200);
+  color: var(--m42-color-000);
 }
