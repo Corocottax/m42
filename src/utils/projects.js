@@ -6,7 +6,7 @@ export const projects = [
     complementary: [],
     title: "Proyecto landing page",
     path: "web developer",
-    compass: "N"
+    compass: [0, 50]
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const projects = [
     complementary: [],
     title: "Proyecto landing page",
     path: "cyber",
-    compass: "W"
+    compass: [50, 0]
   },
   {
     id: 3,
@@ -24,7 +24,8 @@ export const projects = [
     complementary: [4],
     title: "Proyecto seguridad",
     path: "cyber",
-    compass: "W"
+    compass: [60, 1]
+    
   },
   {
     id: 4,
@@ -33,7 +34,7 @@ export const projects = [
     complementary: [3],
     title: "Proyecto seguridad (2)",
     path: "cyber",
-    compass: "W"
+    compass: [42, 1]
   },
   {
     id: 5,
@@ -42,7 +43,7 @@ export const projects = [
     complementary: [],
     title: "Proyecto Tienda con Filtros",
     path: "web developer",
-    compass: "N"
+    compass: [4, 70]
   },
   {
     id: 6,
@@ -51,7 +52,7 @@ export const projects = [
     complementary: [],
     title: "Proyecto Web Async",
     path: "web developer",
-    compass: "N"
+    compass: [4, 30]
   },
   {
     id: 7,
@@ -60,7 +61,7 @@ export const projects = [
     complementary: [],
     title: "Proyecto seguridad avanzada",
     path: "cyber",
-    compass: "W"
+    compass: [70, 4]
   },
   {
     id: 8,
@@ -69,7 +70,7 @@ export const projects = [
     complementary: [],
     title: "Proyecto seguridad segura",
     path: "cyber",
-    compass: "W"
+    compass: [40, 1]
   },
   {
     id: 9,
@@ -78,6 +79,15 @@ export const projects = [
     complementary: [],
     title: "Proyecto Full Stack",
     path: "web developer",
-    compass: "N"
+    compass: [0, 50]
+  },
+  {
+    id: 9,
+    level: 3,
+    pdf: "",
+    complementary: [],
+    title: "Proyecto Full Stack",
+    path: "web developer",
+    compass: [1, 60]
   },
 ];

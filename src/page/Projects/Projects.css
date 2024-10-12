@@ -21,6 +21,7 @@
     border-radius: 100%;
     box-shadow: 0 0 1px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00;
     cursor: pointer;
+    background-color: var(--m42-color-200);
     z-index: 9999;
 }
 

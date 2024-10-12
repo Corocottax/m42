@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { projects } from "../../utils/projects";
 import "./Projects.css";
 import { getPropperty } from "../../utils/getPropperty";
-import { compass } from "../../utils/compass";
+import { RouteContext } from "../../providers/RouteProvider";
 
 const Projects = () => {
   const [openned, setOpenned] = useState();
+
+  const { route } = useContext(RouteContext);
 
   return (
     <div className="projects">
@@ -18,22 +20,21 @@ const Projects = () => {
             height: `${150 * (level + 1)}px`,
           }}
         >
-          {projects.map((project) =>
-            project.level === level ? (
+          {projects.map((project) => {
+            return project.level === level ? (
               <div
                 key={project.id}
                 className="project"
                 onMouseEnter={(e) => setOpenned({ title: project.title, e })}
                 onMouseLeave={() => setOpenned()}
                 style={{
-                  top: `calc(${compass[project.compass][0]}% - 25px)`,
-                  left: `calc(${compass[project.compass][1]}% - 25px)`,
+                  top: `calc(${project.compass[0]}% - 25px)`,
+                  left: `calc(${project.compass[1]}% - 25px)`,
                 }}
               >
-                {console.log(compass[project.compass][0])}
               </div>
-            ) : null
-          )}
+            ) : null;
+          })}
         </div>
       ))}
       {openned && (
