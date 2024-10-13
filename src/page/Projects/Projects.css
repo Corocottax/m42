@@ -1,13 +1,12 @@
 .projects {
     width: calc(100% - 400px);
-    min-width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100svh;
 }
 
-[class^="level"]  {
+[class^="level"] {
     position: absolute;
     border-radius: 100%;
     border: 2px solid var(--m42-color-100);
@@ -23,7 +22,24 @@
     cursor: pointer;
     background-color: var(--m42-color-200);
     z-index: 9999;
+    transition: all 0.5s;
 }
+
+.project.active {
+    animation: iluminar linear 0.5s forwards;
+}
+
+@keyframes iluminar {
+    0% {
+        box-shadow: 0 0 1px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 10px #00ff00, 0 0 10px #00ff00;
+    }
+}
+
+
 
 .titleProject {
     display: flex;
@@ -36,4 +52,3 @@
     position: absolute;
     z-index: 99999;
 }
-

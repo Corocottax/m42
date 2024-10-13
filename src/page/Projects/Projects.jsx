@@ -1,5 +1,4 @@
 import { useContext, useState } from "react";
-import { projects } from "../../utils/projects";
 import "./Projects.css";
 import { getPropperty } from "../../utils/getPropperty";
 import { RouteContext } from "../../providers/RouteProvider";
@@ -7,10 +6,15 @@ import { RouteContext } from "../../providers/RouteProvider";
 const Projects = () => {
   const [openned, setOpenned] = useState();
 
-  const { route } = useContext(RouteContext);
+  const { projectsState: projects } = useContext(RouteContext);
+
+  console.log(projects);
 
   return (
-    <div className="projects">
+    <div
+      className="projects"
+      style={{ minWidth: `${getPropperty("level").length * 150}px` }}
+    >
       {getPropperty("level").map((level) => (
         <div
           key={`level${level}`}
@@ -20,19 +24,21 @@ const Projects = () => {
             height: `${150 * (level + 1)}px`,
           }}
         >
-          {projects.map((project) => {
+          {projects?.map((project) => {
             return project.level === level ? (
-              <div
+              <a
+                href={project.pdf}
+                target="_blank"
                 key={project.id}
-                className="project"
+                className={`project ${project.className}`}
                 onMouseEnter={(e) => setOpenned({ title: project.title, e })}
                 onMouseLeave={() => setOpenned()}
                 style={{
                   top: `calc(${project.compass[0]}% - 25px)`,
                   left: `calc(${project.compass[1]}% - 25px)`,
+                  animationDelay: `${project.pathNumber / 2}s`,
                 }}
-              >
-              </div>
+              ></a>
             ) : null;
           })}
         </div>
