@@ -36,7 +36,7 @@ const Projects = () => {
                 style={{
                   top: `calc(${project.compass[0]}% - 25px)`,
                   left: `calc(${project.compass[1]}% - 25px)`,
-                  animationDelay: `${project.pathNumber / 2}s`,
+                  animationDelay: `${project.pathNumber / 2}s`, 
                 }}
               ></a>
             ) : null;
