@@ -9,6 +9,7 @@ export const projects = [
     compass: [0, 50],
     className: "",
     pathNumber: 0,
+    titleSmall: "Netflix"
   },
   {
     id: 2,
