@@ -21,6 +21,7 @@ export const projects = [
     compass: [50, 0],
     className: "",
     pathNumber: 0,
+    titleSmall: "Nombre"
   },
   {
     id: 3,
@@ -32,6 +33,7 @@ export const projects = [
     compass: [60, 1],
     className: "",
     pathNumber: 1,
+    titleSmall: "Proyecto"
   },
   {
     id: 4,
@@ -43,6 +45,7 @@ export const projects = [
     compass: [42, 1],
     className: "",
     pathNumber: 2,
+    titleSmall: "Landing"
   },
   {
     id: 5,
@@ -54,6 +57,7 @@ export const projects = [
     compass: [4, 70],
     className: "",
     pathNumber: 1,
+    titleSmall: "Play"
   },
   {
     id: 6,
@@ -65,6 +69,7 @@ export const projects = [
     compass: [4, 30],
     className: "",
     pathNumber: 2,
+    titleSmall: "Agua"
   },
   {
     id: 7,
@@ -76,6 +81,7 @@ export const projects = [
     compass: [70, 4],
     className: "",
     pathNumber: 3,
+    titleSmall: "Comida"
   },
   {
     id: 8,
@@ -87,6 +93,7 @@ export const projects = [
     compass: [40, 1],
     className: "",
     pathNumber: 4,
+    titleSmall: "Ejemplo"
   },
   {
     id: 9,
@@ -98,6 +105,7 @@ export const projects = [
     compass: [0, 50],
     className: "",
     pathNumber: 3,
+    titleSmall: "Se te va"
   },
   {
     id: 9,
@@ -109,5 +117,6 @@ export const projects = [
     compass: [1, 60],
     className: "",
     pathNumber: 4,
+    titleSmall: "Patito"
   },
 ];

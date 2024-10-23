@@ -2,9 +2,12 @@ import { useContext, useState } from "react";
 import "./Projects.css";
 import { getPropperty } from "../../utils/getPropperty";
 import { RouteContext } from "../../providers/RouteProvider";
+/* getBoundingClient */
 
 const Projects = () => {
-  const [openned, setOpenned] = useState();
+  const [openned, setOpenned] = useState({
+    title: "Ejemplo ejemplo ejemplo ejemplo",
+  });
 
   const { projectsState: projects } = useContext(RouteContext);
 
@@ -25,35 +28,42 @@ const Projects = () => {
           }}
         >
           {projects?.map((project) => {
-            return project.level === level ? (
-              <a
-                href={project.pdf}
-                target="_blank"
-                key={project.id}
-                className={`project ${project.className}`}
-                onMouseEnter={(e) => setOpenned({ title: project.title, e })}
-                onMouseLeave={() => setOpenned()}
-                style={{
-                  top: `calc(${project.compass[0]}% - 25px)`,
-                  left: `calc(${project.compass[1]}% - 25px)`,
-                  animationDelay: `${project.pathNumber / 2}s`, 
-                }}
-              ></a>
-            ) : null;
+            return project.projects.map((project) => {
+              return project.level === level ? (
+                <a
+                  href={project.pdf}
+                  target="_blank"
+                  key={project.id}
+                  className={`project ${project.className}`}
+                  onMouseEnter={() =>
+                    setOpenned({
+                      title: project.title,
+                      e: {
+                        clientX: project.compass[0],
+                        clientY: project.compass[1],
+                      },
+                    })
+                  }
+                  onMouseLeave={() => setOpenned()}
+                  style={{
+                    top: `calc(${project.compass[0]}% - 25px)`,
+                    left: `calc(${project.compass[1]}% - 25px)`,
+                    animationDelay: `${project.pathNumber / 2}s`,
+                  }}
+                >
+                  {/* {project.degrees && <hr></hr>} */}
+                  {openned?.title === project.title && (
+                    <div className="titleProject">
+                      <h3>{openned.title}</h3>
+                    </div>
+                  )}
+                  {/* {project.smallTitle} */}
+                </a>
+              ) : null;
+            });
           })}
         </div>
       ))}
-      {openned && (
-        <div
-          className="titleProject"
-          style={{
-            top: `${openned.e.clientY - 50}px`,
-            left: `${openned.e.clientX + 50}px`,
-          }}
-        >
-          <h3>{openned.title}</h3>
-        </div>
-      )}
     </div>
   );
 };

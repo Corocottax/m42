@@ -11,6 +11,7 @@
     border-radius: 100%;
     border: 2px solid var(--m42-color-100);
     box-shadow: 0 0 1px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00;
+    /* color como el del nav, todos los círculos - el del centro current en verde y los completados en verde */
 }
 
 .project {
@@ -23,6 +24,12 @@
     background-color: var(--m42-color-200);
     z-index: 9999;
     transition: all 0.5s;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .project.active {
@@ -39,8 +46,6 @@
     }
 }
 
-
-
 .titleProject {
     display: flex;
     justify-content: center;
@@ -51,4 +56,7 @@
     color: var(--m42-color-200);
     position: absolute;
     z-index: 99999;
+    width: 200px;
+    max-height: 50px;
+    left: 52px;
 }

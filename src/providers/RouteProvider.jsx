@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
-import { projects } from "../utils/projects";
+import { projects } from "../utils/projectsV2";
+/* import { projects } from "../utils/projects"; */
 
 export const RouteContext = createContext();
 
@@ -9,11 +10,17 @@ const RouteProvider = ({ children }) => {
 
   useEffect(() => {
     const projectsWithClass = projectsState.map((project) => {
-      project.path === route
-        ? (project.className = "active")
-        : (project.className = "");
-      return project;
+      return {
+        projects: project.projects.map((subProject) => {
+          console.log(subProject);
+          subProject.path === route
+            ? (subProject.className = "active")
+            : (subProject.className = "");
+          return subProject;
+        }),
+      };
     });
+    console.log(projectsWithClass);
     setProjectsState([...projectsWithClass]);
   }, [route]);
 
