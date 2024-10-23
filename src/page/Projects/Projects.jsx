@@ -5,9 +5,7 @@ import { RouteContext } from "../../providers/RouteProvider";
 /* getBoundingClient */
 
 const Projects = () => {
-  const [openned, setOpenned] = useState({
-    title: "Ejemplo ejemplo ejemplo ejemplo",
-  });
+  const [openned, setOpenned] = useState();
 
   const { projectsState: projects } = useContext(RouteContext);
 
@@ -47,6 +45,7 @@ const Projects = () => {
                   }`}
                   onMouseEnter={() =>
                     setOpenned({
+                      id: project.id,
                       title: project.title,
                       e: {
                         clientX: project.compass[0],
@@ -62,7 +61,7 @@ const Projects = () => {
                   }}
                 >
                   {/* {project.degrees && <hr></hr>} */}
-                  {openned?.title === project.title && (
+                  {openned?.id === project.id && (
                     <div className="titleProject">
                       <h3>{openned.title}</h3>
                     </div>

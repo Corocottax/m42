@@ -61,9 +61,8 @@
     background-color: var(--m42-color-300);
     color: var(--m42-color-000);
     position: absolute;
-    z-index: 99999;
+    z-index: 9999999999999999999;
     width: 200px;
-    max-height: 50px;
     left: 52px;
 }
 

@@ -13,7 +13,7 @@ const RouteProvider = ({ children }) => {
       return {
         projects: project.projects.map((subProject) => {
           console.log(subProject);
-          subProject.path === route
+          subProject.path.includes(route)
             ? (subProject.className = "active")
             : (subProject.className = "");
           return subProject;
