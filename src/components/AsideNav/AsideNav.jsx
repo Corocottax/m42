@@ -6,14 +6,14 @@ import { getPropperty } from "../../utils/getPropperty";
 
 const AsideNav = () => {
 
-  const { setRoute } = useContext(RouteContext);
+  const { route, setRoute } = useContext(RouteContext);
 
   return (
     <aside className="asideNav">
       <h3>Elige tu camino deseado</h3>
       {getPropperty("path").map((path, index) => (
-        <h4 key={index} onClick={() => setRoute(path)}>
-          {path}
+        <h4 key={index} onClick={() => setRoute(path)} className={route === path ? "active" : ""}>
+          <span>{`>`} </span>{`${path}`}
         </h4>
       ))}
     </aside>

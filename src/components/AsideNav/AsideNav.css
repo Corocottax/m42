@@ -3,28 +3,30 @@
     min-width: 200px;
     display: flex;
     flex-direction: column;
-    background-color: var(--m42-color-000);
     color: var(--m42-color-200);
     border-radius: 10px;
     height: 90svh;
+    color: var(--m42-color-000);
 }
 
 .asideNav > h3 {
-    font-size: 27px;
-    border-bottom: 2px solid var(--m42-color-200);
+    font-size: 40px;
     padding: 20px;
 }
 
 .asideNav > h4 {
-    font-size: 25px;
+    font-size: 20px;
     padding: 20px;
-    border-bottom: 2px solid var(--m42-color-200);
     cursor: pointer;
     transition: all 0.5s;
+    font-weight: 500;
+    font-family: "IBM Plex Mono", monospace;
 }
 
-.asideNav > h4:hover {
+.asideNav > h4.active {
     color: var(--m42-color-100);
-    border-color: var(--m42-color-100);
-    background-color: var(--m42-color-200);
+}
+
+.asideNav > h4.active > span {
+    color: var(--m42-color-000);
 }

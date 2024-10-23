@@ -7,6 +7,7 @@ const App = () => {
     <div className="app">
       <AsideNav />
       <Projects />
+      <img src="/logo.png" alt="the power university" className="logo"/>
     </div>
   );
 };

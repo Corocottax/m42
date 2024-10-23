@@ -9,9 +9,7 @@
 [class^="level"] {
     position: absolute;
     border-radius: 100%;
-    border: 2px solid var(--m42-color-100);
-    box-shadow: 0 0 1px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00;
-    /* color como el del nav, todos los círculos - el del centro current en verde y los completados en verde */
+    border: 2px solid var(--m42-color-300);
 }
 
 .project {
@@ -19,17 +17,23 @@
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    box-shadow: 0 0 1px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00;
     cursor: pointer;
-    background-color: var(--m42-color-200);
+    background-color: var(--m42-color-300);
     z-index: 9999;
     transition: all 0.5s;
-    color: white;
+    color: var(--m42-color-200);
     text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 14px;
+}
+
+.project:hover {
+    color: var(--m42-color-000);
+    transform: scale(1.1);
+    
 }
 
 .project.active {
@@ -38,11 +42,13 @@
 
 @keyframes iluminar {
     0% {
-        box-shadow: 0 0 1px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00, 0 0 5px #00ff00;
+        border: 0px;
+        color: var(--m42-color-200);
     }
 
     100% {
-        box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 10px #00ff00, 0 0 10px #00ff00;
+        border: 2px solid var(--m42-color-100);
+        color: var(--m42-color-000);
     }
 }
 
@@ -51,12 +57,21 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    border-radius: 10px;
-    background-color: var(--m42-color-000);
-    color: var(--m42-color-200);
+    border-radius: 40px;
+    background-color: var(--m42-color-300);
+    color: var(--m42-color-000);
     position: absolute;
     z-index: 99999;
     width: 200px;
     max-height: 50px;
     left: 52px;
+}
+
+.project.completed {
+    background-color: var(--m42-color-100);
+    color: var(--m42-color-000);
+}
+
+.level_completed {
+    border-color: var(--m42-color-100);
 }

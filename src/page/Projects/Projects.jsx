@@ -21,7 +21,15 @@ const Projects = () => {
       {getPropperty("level").map((level) => (
         <div
           key={`level${level}`}
-          className={`level${level}`}
+          className={`level${level} ${
+            projects.find((project) =>
+              project.projects.find(
+                (project) => project.level === level && project.completed
+              )
+            )
+              ? "level_completed"
+              : ""
+          }`}
           style={{
             width: `${150 * (level + 1)}px`,
             height: `${150 * (level + 1)}px`,
@@ -34,7 +42,9 @@ const Projects = () => {
                   href={project.pdf}
                   target="_blank"
                   key={project.id}
-                  className={`project ${project.className}`}
+                  className={`project ${project.className} ${
+                    project.completed ? "completed" : "pending"
+                  }`}
                   onMouseEnter={() =>
                     setOpenned({
                       title: project.title,
@@ -48,7 +58,7 @@ const Projects = () => {
                   style={{
                     top: `calc(${project.compass[0]}% - 25px)`,
                     left: `calc(${project.compass[1]}% - 25px)`,
-                    animationDelay: `${project.pathNumber / 2}s`,
+                    animationDelay: `${project.pathNumber / 20}s`,
                   }}
                 >
                   {/* {project.degrees && <hr></hr>} */}
@@ -57,7 +67,7 @@ const Projects = () => {
                       <h3>{openned.title}</h3>
                     </div>
                   )}
-                  {/* {project.smallTitle} */}
+                  {project.smallTitle}
                 </a>
               ) : null;
             });

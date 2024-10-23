@@ -11,7 +11,8 @@ export const projects = [
         compass: [0, 50],
         className: "",
         pathNumber: 0,
-        smallTitle: "Netflix",
+        smallTitle: "MLN1",
+        completed: true
       },
       {
         level: 1,
@@ -22,7 +23,8 @@ export const projects = [
         compass: [4, 70],
         className: "",
         pathNumber: 1,
-        smallTitle: "Play",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 1,
@@ -33,7 +35,8 @@ export const projects = [
         compass: [4, 30],
         className: "",
         pathNumber: 2,
-        smallTitle: "Agua",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 2,
@@ -44,7 +47,8 @@ export const projects = [
         compass: [0, 50],
         className: "",
         pathNumber: 3,
-        smallTitle: "Se te va",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 3,
@@ -55,18 +59,8 @@ export const projects = [
         compass: [1, 60],
         className: "",
         pathNumber: 4,
-        smallTitle: "Patito",
-      },
-      {
-        level: 3,
-        pdf: "https://s3.amazonaws.com/staticcontent.thepowermba/TECH+SCHOOL/RTC/HTML5/clase1.pdf",
-        complementary: [],
-        title: "Proyecto Full Stack 3",
-        path: "web developer",
-        compass: [1, 60],
-        className: "",
-        pathNumber: 4,
-        smallTitle: "Patito",
+        smallTitle: "MLN1",
+        completed: false
       }
     ],
   },
@@ -82,7 +76,8 @@ export const projects = [
         compass: [50, 0],
         className: "",
         pathNumber: 0,
-        smallTitle: "Nombre",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 1,
@@ -93,7 +88,8 @@ export const projects = [
         compass: [60, 1],
         className: "",
         pathNumber: 1,
-        smallTitle: "Proyecto",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 1,
@@ -104,7 +100,8 @@ export const projects = [
         compass: [42, 1],
         className: "",
         pathNumber: 2,
-        smallTitle: "Landing",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 2,
@@ -115,7 +112,8 @@ export const projects = [
         compass: [70, 4],
         className: "",
         pathNumber: 3,
-        smallTitle: "Comida",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 2,
@@ -126,7 +124,8 @@ export const projects = [
         compass: [40, 1],
         className: "",
         pathNumber: 4,
-        smallTitle: "Ejemplo",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 3,
@@ -137,7 +136,8 @@ export const projects = [
         compass: [55, 0],
         className: "",
         pathNumber: 5,
-        smallTitle: "Ejemplo",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 3,
@@ -148,7 +148,8 @@ export const projects = [
         compass: [65, -15],
         className: "",
         pathNumber: 6,
-        smallTitle: "Ejemplo",
+        smallTitle: "MLN1",
+        completed: false
       },
       {
         level: 3,
@@ -159,7 +160,8 @@ export const projects = [
         compass: [45, -25],
         className: "",
         pathNumber: 7,
-        smallTitle: "Ejemplo",
+        smallTitle: "MLN1",
+        completed: false
       },
     ],
   },
