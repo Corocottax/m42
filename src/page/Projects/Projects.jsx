@@ -47,6 +47,7 @@ const Projects = ({ setOpenned }) => {
                         clientX: e.target.getBoundingClientRect().left,
                         clientY: e.target.getBoundingClientRect().top,
                       },
+                      left: project.left
                     })
                   }
                   onMouseLeave={() => setOpenned()}

@@ -16,7 +16,9 @@ const App = () => {
           className="titleProject"
           style={{
             top: `${openned.e.clientY}px`,
-            left: `${openned.e.clientX + 54}px`,
+            left: `${
+              openned.left ? openned.e.clientX - 204 : openned.e.clientX + 54
+            }px`,
           }}
         >
           <h3>{openned.title}</h3>

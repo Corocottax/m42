@@ -589,6 +589,7 @@ export const projects = [
         compass: [15, 95],
         pathNumber: 4,
         smallTitle: "PSA1",
+        left: true
       },
       {
         id: 44,
@@ -599,6 +600,7 @@ export const projects = [
         compass: [15, 105],
         pathNumber: 5,
         smallTitle: "PSA2",
+        left: true
       },
       {
         id: 45,
@@ -609,6 +611,7 @@ export const projects = [
         compass: [5, 105],
         pathNumber: 6,
         smallTitle: "PSA3",
+        left: true
       },
       {
         id: 46,
@@ -619,6 +622,7 @@ export const projects = [
         compass: [10, 115],
         pathNumber: 7,
         smallTitle: "PSA4",
+        left: true
       },
       {
         id: 47,
@@ -629,6 +633,7 @@ export const projects = [
         compass: [18, 122],
         pathNumber: 8,
         smallTitle: "PSA5",
+        left: true
       },
     ],
   },
