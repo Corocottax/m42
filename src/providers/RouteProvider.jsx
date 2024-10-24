@@ -12,7 +12,6 @@ const RouteProvider = ({ children }) => {
     const projectsWithClass = projectsState.map((project) => {
       return {
         projects: project.projects.map((subProject) => {
-          console.log(subProject);
           subProject.path.includes(route)
             ? (subProject.className = "active")
             : (subProject.className = "");
@@ -20,7 +19,6 @@ const RouteProvider = ({ children }) => {
         }),
       };
     });
-    console.log(projectsWithClass);
     setProjectsState([...projectsWithClass]);
   }, [route]);
 

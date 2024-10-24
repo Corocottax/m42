@@ -32,6 +32,7 @@ export const projects = [
         compass: [50, 100],
         pathNumber: 0,
         smallTitle: "AMAT",
+        completed: true,
       },
       {
         id: 3,
@@ -47,6 +48,7 @@ export const projects = [
         compass: [100, 50],
         pathNumber: 0,
         smallTitle: "DISC",
+        completed: true,
       },
       {
         id: 4,
@@ -62,6 +64,7 @@ export const projects = [
         compass: [50, 0],
         pathNumber: 0,
         smallTitle: "EDA1",
+        completed: true,
       },
       {
         id: 5,
@@ -77,6 +80,7 @@ export const projects = [
         compass: [15, 85],
         pathNumber: 1,
         smallTitle: "MOD1",
+        completed: true,
       },
       {
         id: 6,
@@ -92,6 +96,7 @@ export const projects = [
         compass: [85, 85],
         pathNumber: 1,
         smallTitle: "ALGE",
+        completed: true,
       },
       {
         id: 7,
@@ -107,6 +112,7 @@ export const projects = [
         compass: [85, 15],
         pathNumber: 1,
         smallTitle: "PROG",
+        completed: true,
       },
       {
         id: 8,
@@ -122,6 +128,7 @@ export const projects = [
         compass: [15, 15],
         pathNumber: 1,
         smallTitle: "SIOP",
+        completed: true,
       },
       {
         id: 9,

@@ -16,13 +16,14 @@ const Projects = ({ setOpenned }) => {
         <div
           key={`level${level}`}
           className={`level${level} ${
-            projects.find((project) =>
-              project.projects.find(
-                (project) => project.level === level && project.completed
-              )
+            projects.find(
+              (project) =>
+                project.projects.find(
+                  (project) => project.level === level && !project.completed
+                )
             )
-              ? "level_completed"
-              : ""
+              ? ""
+              : "level_completed"
           }`}
           style={{
             width: `${150 * (level + 1)}px`,
@@ -47,7 +48,7 @@ const Projects = ({ setOpenned }) => {
                         clientX: e.target.getBoundingClientRect().left,
                         clientY: e.target.getBoundingClientRect().top,
                       },
-                      left: project.left
+                      left: project.left,
                     })
                   }
                   onMouseLeave={() => setOpenned()}
