@@ -4,12 +4,8 @@ import { getPropperty } from "../../utils/getPropperty";
 import { RouteContext } from "../../providers/RouteProvider";
 /* getBoundingClient */
 
-const Projects = () => {
-  const [openned, setOpenned] = useState();
-
+const Projects = ({ setOpenned }) => {
   const { projectsState: projects } = useContext(RouteContext);
-
-  console.log(projects);
 
   return (
     <div
@@ -43,13 +39,13 @@ const Projects = () => {
                   className={`project ${project.className} ${
                     project.completed ? "completed" : "pending"
                   }`}
-                  onMouseEnter={() =>
+                  onMouseEnter={(e) =>
                     setOpenned({
                       id: project.id,
                       title: project.title,
                       e: {
-                        clientX: project.compass[0],
-                        clientY: project.compass[1],
+                        clientX: e.target.getBoundingClientRect().left,
+                        clientY: e.target.getBoundingClientRect().top,
                       },
                     })
                   }
@@ -60,12 +56,6 @@ const Projects = () => {
                     animationDelay: `${project.pathNumber / 20}s`,
                   }}
                 >
-                  {/* {project.degrees && <hr></hr>} */}
-                  {openned?.id === project.id && (
-                    <div className="titleProject">
-                      <h3>{openned.title}</h3>
-                    </div>
-                  )}
                   {project.smallTitle}
                 </a>
               ) : null;

@@ -43,27 +43,13 @@
 @keyframes iluminar {
     0% {
         border: 0px;
-        color: var(--m42-color-200);
+        /* color: var(--m42-color-200); */
     }
 
     100% {
         border: 2px solid var(--m42-color-100);
         color: var(--m42-color-000);
     }
-}
-
-.titleProject {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 40px;
-    background-color: var(--m42-color-300);
-    color: var(--m42-color-000);
-    position: absolute;
-    z-index: 9999999999999999999;
-    width: 200px;
-    left: 52px;
 }
 
 .project.completed {

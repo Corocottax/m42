@@ -12,3 +12,18 @@
   width: 200px;
   right: 20px;
 }
+
+.titleProject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 40px;
+  background-color: var(--m42-color-300);
+  color: var(--m42-color-000);
+  position: absolute;
+  z-index: 9999999999999999999;
+  width: 200px;
+  left: 52px;
+  text-align: center;
+}
