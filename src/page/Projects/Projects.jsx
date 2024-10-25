@@ -59,6 +59,13 @@ const Projects = ({ setOpenned }) => {
                   }}
                 >
                   {project.smallTitle}
+                  {project.img && (
+                    <img
+                      className="logo_service"
+                      src={project.img}
+                      alt={project.img.split(".")[0].replace("/", "")}
+                    />
+                  )}
                 </a>
               ) : null;
             });
