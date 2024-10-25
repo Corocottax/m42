@@ -10,6 +10,8 @@
     position: absolute;
     border-radius: 100%;
     border: 2px solid var(--m42-color-300);
+    display: flex;
+    justify-content: center;
 }
 
 .project {
@@ -28,12 +30,15 @@
     align-items: center;
     text-align: center;
     font-size: 14px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    transition: all 0.5s;
 }
 
 .project:hover {
     color: var(--m42-color-000);
-    transform: scale(1.1);
-    
+    transform: scale(1.2);
+    font-weight: 500;
 }
 
 .project.active {
@@ -59,4 +64,27 @@
 
 .level_completed {
     border-color: var(--m42-color-100);
+}
+
+.project.active.especialization {
+    animation: iluminarEspecializacion linear 0.5s forwards;
+}
+
+@keyframes iluminarEspecializacion {
+    0% {
+        border: 0px;
+    }
+
+    100% {
+        border: 2px solid gold;
+        color: var(--m42-color-000);
+    }
+}
+
+[class^="level"] > p {
+    color: var(--m42-color-200);
+    font-weight: 300;
+    font-family: "IBM Plex Mono", monospace;
+    position: absolute;
+    top: -25px;
 }

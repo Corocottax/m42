@@ -1,9 +1,8 @@
 .app {
-  display: flex;
-  justify-content: space-between;
+  display: flex;/* 
+  justify-content: space-between; */
   padding: 50px;
   flex-wrap: wrap;
-  gap: 50px;
 }
 
 .logo {
@@ -17,13 +16,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border-radius: 40px;
+  padding: 16px;
   background-color: var(--m42-color-300);
   color: var(--m42-color-000);
   position: absolute;
   z-index: 9999999999999999999;
-  width: 200px;
-  left: 52px;
-  text-align: center;
+  width: 250px;
+  text-align: left;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
 }

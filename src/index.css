@@ -20,4 +20,6 @@
 body {
   background-color: var(--m42-color-400);
   color: var(--m42-color-000);
+  max-height: 100svh;
+  overflow: hidden;
 }

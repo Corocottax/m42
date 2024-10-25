@@ -16,11 +16,10 @@ const Projects = ({ setOpenned }) => {
         <div
           key={`level${level}`}
           className={`level${level} ${
-            projects.find(
-              (project) =>
-                project.projects.find(
-                  (project) => project.level === level && !project.completed
-                )
+            projects.find((project) =>
+              project.projects.find(
+                (project) => project.level === level && !project.completed
+              )
             )
               ? ""
               : "level_completed"
@@ -30,6 +29,7 @@ const Projects = ({ setOpenned }) => {
             height: `${150 * (level + 1)}px`,
           }}
         >
+          <p>Año {level + 1}</p>
           {projects?.map((project) => {
             return project.projects.map((project) => {
               return project.level === level ? (
@@ -39,7 +39,7 @@ const Projects = ({ setOpenned }) => {
                   key={project.id}
                   className={`project ${project.className} ${
                     project.completed ? "completed" : "pending"
-                  }`}
+                  } ${project.especialization ? "especialization" : ""}`}
                   onMouseEnter={(e) =>
                     setOpenned({
                       id: project.id,

@@ -12,15 +12,20 @@
 .asideNav > h3 {
     font-size: 40px;
     padding: 20px;
+    font-family: "Poppins", sans-serif;
 }
 
 .asideNav > h4 {
-    font-size: 20px;
+    font-size: 16px;
     padding: 20px;
     cursor: pointer;
     transition: all 0.5s;
-    font-weight: 500;
+    font-weight: 300;
     font-family: "IBM Plex Mono", monospace;
+}
+
+.asideNav > h4:hover {
+    font-weight: 500;
 }
 
 .asideNav > h4.active {

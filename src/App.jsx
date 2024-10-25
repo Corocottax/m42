@@ -15,8 +15,8 @@ const App = () => {
       const titleHeight = titleRef.current.clientHeight;
       const top = openned.e.clientY + 25 - titleHeight / 2;
       const left = openned.left
-        ? openned.e.clientX - 204
-        : openned.e.clientX + 54;
+        ? openned.e.clientX - 254
+        : openned.e.clientX + 55;
       setPosition({ top, left });
     }
   }, [openned]);

@@ -27,32 +27,25 @@ const AsideNav = () => {
         <span>{`>`} </span> Data Scientist
       </h4>
       <h4
-        onClick={() =>
-          route === "Visualización de datos"
-            ? setRoute()
-            : openRoute("Visualización de datos")
-        }
-        className={route === "Visualización de datos" ? "active" : ""}
+        onClick={() => (route === "Cloud" ? setRoute() : openRoute("Cloud"))}
+        className={route === "Cloud" ? "active" : ""}
+        style={{ marginLeft: "20px" }}
       >
-        <span>{`>`} </span> Visualización de datos
+        <span>{`>`} </span> Acelerador Cloud Computing
       </h4>
       <h4
-        onClick={() =>
-          route === "Desarrollo de IA"
-            ? setRoute()
-            : openRoute("Desarrollo de IA")
-        }
-        className={route === "Desarrollo de IA" ? "active" : ""}
+        onClick={() => (route === "Data" ? setRoute() : openRoute("Data"))}
+        className={route === "Data" ? "active" : ""}
+        style={{ marginLeft: "20px" }}
       >
-        <span>{`>`} </span> Desarrollo de IA
+        <span>{`>`} </span> Acelerador Data Engineer
       </h4>
       <h4
-        onClick={() =>
-          route === "Scrapping" ? setRoute() : openRoute("Scrapping")
-        }
-        className={route === "Scrapping" ? "active" : ""}
+        onClick={() => (route === "IA" ? setRoute() : openRoute("IA"))}
+        className={route === "IA" ? "active" : ""}
+        style={{ marginLeft: "20px" }}
       >
-        <span>{`>`} </span> Scrapping
+        <span>{`>`} </span> Acelerador Desarrollador IA
       </h4>
     </aside>
   );
